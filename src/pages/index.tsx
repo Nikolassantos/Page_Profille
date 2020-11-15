@@ -9,10 +9,20 @@ import {
   FaEnvelope
 } from 'react-icons/fa'
 import { Container } from '../styles/pages/Home'
-import { IViewProps } from '../modules/types'
 
-const LoginScreen: React.FC = (props: IViewProps): JSX.Element => {
-  const { name } = props
+// const signInBtn = document.querySelector('#sign-in-btn')
+// const signUpBtn = document.querySelector('#sign-up-btn')
+// const container = document.querySelector('.container')
+
+// signUpBtn.addEventListener('click', () => {
+//   container.classList.add('sign-up-mode')
+// })
+
+// signInBtn.addEventListener('click', () => {
+//   container.classList.add('sign-up-mode')
+// })
+
+const LoginScreen: React.FC = (): JSX.Element => {
   return (
     <Container>
       <div className="container">
