@@ -9,8 +9,10 @@ import {
   FaEnvelope
 } from 'react-icons/fa'
 import { Container } from '../styles/pages/Home'
+import { IViewProps } from '../modules/types'
 
-const Home: React.FC = () => {
+const LoginScreen: React.FC = (props: IViewProps): JSX.Element => {
+  const { name } = props
   return (
     <Container>
       <div className="container">
@@ -125,7 +127,11 @@ const Home: React.FC = () => {
                 Sign up
               </button>
             </div>
-            <img src="../images/desk.png" alt="logo" />
+            <img
+              className="image"
+              src={require('../images/desk.png')}
+              alt="logo"
+            />
           </div>
 
           <div className="panel right-panel">
@@ -139,7 +145,11 @@ const Home: React.FC = () => {
                 Sign in
               </button>
             </div>
-            <img src="../images/desk.png" alt="logo" />
+            <img
+              className="image"
+              src={require('../images/desk.png')}
+              alt="logo"
+            />
           </div>
         </div>
       </div>
@@ -147,4 +157,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default LoginScreen
