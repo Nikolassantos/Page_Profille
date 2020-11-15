@@ -1,20 +1,170 @@
 import React from 'react'
-import Head from 'next/head'
-
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGoogle,
+  FaLinkedinIn,
+  FaUser,
+  FaLock,
+  FaEnvelope
+} from 'react-icons/fa'
 import { Container } from '../styles/pages/Home'
 
-const Home: React.FC = () => {
+// const signInBtn = document.querySelector('#sign-in-btn')
+// const signUpBtn = document.querySelector('#sign-up-btn')
+// const container = document.querySelector('.container')
+
+// signUpBtn.addEventListener('click', () => {
+//   container.classList.add('sign-up-mode')
+// })
+
+// signInBtn.addEventListener('click', () => {
+//   container.classList.add('sign-up-mode')
+// })
+
+const LoginScreen: React.FC = (): JSX.Element => {
   return (
     <Container>
-      <Head>
-        <title>Homepage</title>
-      </Head>
+      <div className="container">
+        <div className="forms-container">
+          <div className="signin-signup">
+            <form action="" className="sign-in-form">
+              <h2 className="title">Sign in</h2>
+              {/* inputs for refactoring */}
+              <div className="input-field">
+                <i>
+                  <FaUser />
+                </i>
+                <input type="text" placeholder="Username" />
+              </div>
 
-      <h1>ReactJS Structure</h1>
-      <p>A ReactJS + Next.js structure made by Nikolas ❤.</p>
+              <div className="input-field">
+                <i>
+                  <FaLock className="input-icon" />
+                </i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <input type="submit" value="Login" className="btn solid" />
+
+              <p className="social-text">Or sign in with social platform</p>
+              <div className="social-media">
+                {/* social media icons to refactoring */}
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaFacebookF />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaTwitter />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaGoogle />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaLinkedinIn />
+                  </i>
+                </a>
+              </div>
+            </form>
+
+            <form action="" className="sign-up-form">
+              <h2 className="title">Sign up</h2>
+              {/* inputs for refactoring */}
+              <div className="input-field">
+                <i>
+                  <FaUser />
+                </i>
+                <input type="text" placeholder="Username" />
+              </div>
+
+              <div className="input-field">
+                <i>
+                  <FaEnvelope className="input-icon" />
+                </i>
+                <input type="password" placeholder="Email" />
+              </div>
+
+              <div className="input-field">
+                <i>
+                  <FaLock className="input-icon" />
+                </i>
+                <input type="password" placeholder="Password" />
+              </div>
+
+              <input type="submit" value="Sign up" className="btn solid" />
+
+              <p className="social-text">Or sign up with social platform</p>
+              <div className="social-media">
+                {/* social media icons to refactoring */}
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaFacebookF />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaTwitter />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaGoogle />
+                  </i>
+                </a>
+                <a href="#" className="social-icon">
+                  <i>
+                    <FaLinkedinIn />
+                  </i>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="panels-container">
+          <div className="panel left-panel">
+            <div className="content">
+              <h3>New here ?</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been.
+              </p>
+              <button className="btn transparent" id="sign-up-btn">
+                Sign up
+              </button>
+            </div>
+            <img
+              className="image"
+              src={require('../images/desk.png')}
+              alt="logo"
+            />
+          </div>
+
+          <div className="panel right-panel">
+            <div className="content">
+              <h3>One of us ?</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been.
+              </p>
+              <button className="btn transparent" id="sign-in-btn">
+                Sign in
+              </button>
+            </div>
+            <img
+              className="image"
+              src={require('../images/desk.png')}
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
     </Container>
   )
 }
 
-export default Home
+export default LoginScreen
